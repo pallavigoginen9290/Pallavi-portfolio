@@ -1,13 +1,41 @@
-body {
+@import "./vars.css";
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030b1e;
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(25, 55, 109, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 90% 25%, rgba(87, 108, 188, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 30% 70%, rgba(11, 36, 71, 0.5) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(111, 255, 233, 0.12) 0%, transparent 40%);
+  background-attachment: fixed;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030b1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #19376d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #576cbc;
 }

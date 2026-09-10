@@ -1,0 +1,36 @@
+@import "../../vars.css";
+
+.container {
+  margin-top: 80px;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+.projects {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 36px;
+  width: 100%;
+  align-items: stretch;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}

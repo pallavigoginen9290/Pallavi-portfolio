@@ -1,0 +1,103 @@
+@import "../../vars.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #19376d 0%, #0b2447 100%);
+  border: 1px solid rgba(87, 108, 188, 0.35);
+  box-shadow: 0 10px 24px rgba(4, 21, 45, 0.5);
+  padding: 24px 28px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-6px);
+  border-color: #6fffe9;
+  box-shadow: 0 16px 32px rgba(87, 108, 188, 0.35);
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+  flex-grow: 1;
+}
+
+.skills {
+  width: 100%;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.skill {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 100px;
+  background: var(--color-dark);
+  border: 1px solid rgba(87, 108, 188, 0.4);
+  padding: 4px 14px;
+  color: #a5d7e8;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+.skill:hover {
+  transform: translateY(-3px) scale(1.06);
+  background: #19376d;
+  color: #6fffe9;
+  border-color: #6fffe9;
+  box-shadow: 0 4px 12px rgba(111, 255, 233, 0.3);
+}
+
+.links {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 100px;
+  background: var(--color-primary);
+  padding: 8px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.link:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: #6fffe9;
+  color: #04152d;
+  box-shadow: 0 6px 18px rgba(111, 255, 233, 0.45);
+}

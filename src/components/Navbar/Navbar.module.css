@@ -1,0 +1,158 @@
+@import "../../vars.css";
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 10%;
+  z-index: 100;
+  background: rgba(3, 11, 30, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(87, 108, 188, 0.25);
+  transition: all 0.3s ease;
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  background: rgba(11, 36, 71, 0.6);
+  border: 1px solid rgba(111, 255, 233, 0.35);
+  box-shadow: 0 4px 15px rgba(4, 21, 45, 0.6), inset 0 0 12px rgba(111, 255, 233, 0.08);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.title:hover {
+  border-color: #6fffe9;
+  box-shadow: 0 0 25px rgba(111, 255, 233, 0.45), inset 0 0 16px rgba(111, 255, 233, 0.15);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.brandCode {
+  color: #6fffe9;
+  font-family: var(--font-code, 'Fira Code', monospace);
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.brandName {
+  color: #ffffff;
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 40%, #a5d7e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 2px;
+}
+
+.brandDot {
+  color: #6fffe9;
+  font-weight: 900;
+  text-shadow: 0 0 8px #6fffe9;
+}
+
+.brandExt {
+  color: #6fffe9;
+  font-family: var(--font-code, 'Fira Code', monospace);
+  font-weight: 700;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menuItems {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItems a {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.menuItems a:hover {
+  color: #6fffe9;
+  background: rgba(111, 255, 233, 0.1);
+  transform: translateY(-2px);
+}
+
+.contactLink {
+  background: linear-gradient(135deg, rgba(87, 108, 188, 0.4) 0%, rgba(111, 255, 233, 0.2) 100%) !important;
+  border: 1px solid rgba(111, 255, 233, 0.4) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.contactLink:hover {
+  background: #6fffe9 !important;
+  color: #030b1e !important;
+  box-shadow: 0 0 16px rgba(111, 255, 233, 0.5) !important;
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    padding: 16px 6%;
+  }
+
+  .menu {
+    position: absolute;
+    right: 6%;
+    top: 18px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .menuBtn {
+    display: block;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
+
+  .menuItems {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    border-radius: 14px;
+    background: rgba(11, 36, 71, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(87, 108, 188, 0.4);
+    padding: 24px 32px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .menuOpen {
+    display: flex;
+    z-index: 100;
+  }
+}

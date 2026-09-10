@@ -1,0 +1,136 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  background: rgba(11, 36, 71, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(87, 108, 188, 0.3);
+  border-radius: 20px;
+  padding: 50px 60px;
+  margin-top: 100px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  box-shadow: 0 16px 40px rgba(4, 21, 45, 0.5);
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  margin-bottom: 36px;
+  display: inline-block;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #6fffe9;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #6fffe9;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+.aboutImage {
+  width: 38%;
+  max-width: 380px;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+}
+
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  flex: 1;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 14px;
+  list-style: none;
+  padding: 20px 24px;
+  background: rgba(11, 36, 71, 0.6);
+  border: 1px solid rgba(87, 108, 188, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+}
+
+.aboutItem:hover {
+  transform: translateX(8px);
+  border-color: #6fffe9;
+  background: rgba(25, 55, 109, 0.5);
+  box-shadow: 0 8px 25px rgba(111, 255, 233, 0.2);
+}
+
+.aboutItem img {
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  background: rgba(87, 108, 188, 0.25);
+  border: 1px solid rgba(111, 255, 233, 0.3);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.aboutItemText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.aboutItem h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+}
+
+.aboutItem p {
+  font-size: 15px;
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  line-height: 1.55;
+  color: #a5d7e8;
+  margin: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    padding: 32px 24px;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 60px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+
+  .aboutItem {
+    padding: 16px;
+  }
+}

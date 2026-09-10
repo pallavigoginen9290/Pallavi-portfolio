@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Blockchain IoT Food Supply Chain",
+    "imageSrc": "projects/project.svg",
+    "description": "Web-based system to track organic food from farm to consumer. Implemented blockchain for secure quality verification, integrated IoT for real-time condition monitoring, and enabled QR code traceability.",
+    "skills": ["Blockchain", "IoT", "Web Technologies", "SQL", "Security"],
+    "demo": "#",
+    "source": "https://github.com/pallavigogineni929"
+  },
+  {
+    "title": "Interactive Cloud Portfolio & Supabase",
+    "imageSrc": "projects/project.svg",
+    "description": "Modern responsive portfolio integrated with Supabase PostgreSQL cloud backend for real-time visitor messaging, dynamic data synchronization, and showcase of credentials.",
+    "skills": ["Supabase", "PostgreSQL", "HTML5", "CSS Modules"],
+    "demo": "#",
+    "source": "https://github.com/pallavigogineni929"
+  }
+]

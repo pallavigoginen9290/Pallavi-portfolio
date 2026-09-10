@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="100%" height="100%">
+  <defs>
+    <!-- Deep space globe gradient -->
+    <radialGradient id="globeCore" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#243b7a" />
+      <stop offset="60%" stop-color="#0e1e3e" />
+      <stop offset="100%" stop-color="#040b18" />
+    </radialGradient>
+
+    <!-- Neon Rim Gradient -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6fffe9" />
+      <stop offset="50%" stop-color="#576cbc" />
+      <stop offset="100%" stop-color="#a5d7e8" />
+    </linearGradient>
+
+    <!-- Atmospheric Halo -->
+    <radialGradient id="atmosHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#6fffe9" stop-opacity="0.18" />
+      <stop offset="85%" stop-color="#576cbc" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#030b1e" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Avatar clip to keep it strictly inside the globe circular frame -->
+    <clipPath id="globeClip">
+      <circle cx="170" cy="170" r="138" />
+    </clipPath>
+
+    <!-- Drop shadow for the inner avatar -->
+    <filter id="avatarGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#030b1e" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <!-- Ambient outer planetary aura -->
+  <circle cx="170" cy="170" r="162" fill="url(#atmosHalo)" />
+
+  <!-- Outer Cyber Bezel -->
+  <circle cx="170" cy="170" r="144" fill="none" stroke="#6fffe9" stroke-width="1.2" stroke-dasharray="8 12" opacity="0.6" />
+  <circle cx="170" cy="170" r="140" fill="none" stroke="url(#rimGrad)" stroke-width="2.5" />
+
+  <!-- Base Globe Sphere (clipped) -->
+  <g clip-path="url(#globeClip)">
+    <circle cx="170" cy="170" r="138" fill="url(#globeCore)" />
+
+    <!-- High-Tech Cyber Longitude & Latitude Rings -->
+    <!-- Equator -->
+    <ellipse cx="170" cy="170" rx="138" ry="42" fill="none" stroke="#6fffe9" stroke-width="1.2" stroke-dasharray="5 7" opacity="0.3" />
+    <!-- Upper Latitude -->
+    <ellipse cx="170" cy="115" rx="122" ry="32" fill="none" stroke="#576cbc" stroke-width="1" stroke-dasharray="4 6" opacity="0.25" />
+    <!-- Lower Latitude -->
+    <ellipse cx="170" cy="225" rx="122" ry="32" fill="none" stroke="#576cbc" stroke-width="1" stroke-dasharray="4 6" opacity="0.25" />
+    <!-- Meridian Arc -->
+    <ellipse cx="170" cy="170" rx="46" ry="138" fill="none" stroke="#a5d7e8" stroke-width="1" stroke-dasharray="4 8" opacity="0.2" />
+
+    <!-- Avatar Drawing Group -->
+    <g filter="url(#avatarGlow)">
+      <!-- Long hair background -->
+      <path d="M 120 120 Q 112 245 145 285 L 195 285 Q 228 245 220 120 Z" fill="#1b1c2b" />
+
+      <!-- Neck -->
+      <rect x="154" y="180" width="32" height="38" fill="#e8b298" rx="5" />
+      <path d="M 154 195 Q 170 205 186 195 Z" fill="#d2967e" opacity="0.4" />
+
+      <!-- Shoulders & Tech Jacket -->
+      <path d="M 95 320 C 95 245 130 220 170 220 C 210 220 245 245 245 320 Z" fill="#0b2447" stroke="#576cbc" stroke-width="2" />
+      <!-- Collar V-neck -->
+      <path d="M 148 220 L 170 252 L 192 220 Z" fill="#576cbc" />
+      <path d="M 160 220 L 170 236 L 180 220 Z" fill="#6fffe9" opacity="0.7" />
+
+      <!-- Head / Face -->
+      <ellipse cx="170" cy="144" rx="38" ry="44" fill="#ffcbb0" />
+
+      <!-- Hair Bangs / Front -->
+      <path d="M 132 130 C 132 94 154 84 170 84 C 190 84 208 94 208 130 C 195 110 182 114 170 110 C 158 114 145 110 132 130 Z" fill="#2d2238" />
+
+      <!-- Eyebrows -->
+      <path d="M 149 133 Q 155 129 162 132" fill="none" stroke="#2d2238" stroke-width="2" stroke-linecap="round" />
+      <path d="M 178 132 Q 185 129 191 133" fill="none" stroke="#2d2238" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Eyes & Catchlights -->
+      <ellipse cx="155" cy="142" rx="4.5" ry="5.5" fill="#1b1c2b" />
+      <ellipse cx="185" cy="142" rx="4.5" ry="5.5" fill="#1b1c2b" />
+      <circle cx="157" cy="140" r="1.4" fill="#ffffff" />
+      <circle cx="187" cy="140" r="1.4" fill="#ffffff" />
+
+      <!-- Friendly Smile -->
+      <path d="M 161 163 Q 170 171 179 163" fill="none" stroke="#d05353" stroke-width="2.2" stroke-linecap="round" />
+
+      <!-- Modern Cyber Glasses -->
+      <rect x="146" y="135" width="19" height="15" rx="3.5" fill="none" stroke="#6fffe9" stroke-width="1.8" />
+      <rect x="175" y="135" width="19" height="15" rx="3.5" fill="none" stroke="#6fffe9" stroke-width="1.8" />
+      <line x1="165" y1="140" x2="175" y2="140" stroke="#6fffe9" stroke-width="1.8" />
+    </g>
+
+    <!-- Glass Sphere Inner Horizon / Specular Glare -->
+    <ellipse cx="170" cy="50" rx="90" ry="24" fill="#ffffff" opacity="0.08" />
+    <path d="M 35 170 A 135 135 0 0 1 295 120 A 138 138 0 0 0 35 170 Z" fill="#6fffe9" opacity="0.05" />
+  </g>
+
+  <!-- Glowing Bezel Accent Dots (N, S, E, W coordinates) -->
+  <circle cx="170" cy="26" r="3" fill="#6fffe9" />
+  <circle cx="314" cy="170" r="3" fill="#6fffe9" />
+  <circle cx="170" cy="314" r="3" fill="#6fffe9" />
+  <circle cx="26" cy="170" r="3" fill="#6fffe9" />
+</svg>
