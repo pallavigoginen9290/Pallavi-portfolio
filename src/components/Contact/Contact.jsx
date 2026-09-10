@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import styles from "./Contact.module.css";
 import { getImageUrl } from "../../utils";
 import { supabase } from "../../supabaseClient";
+
+const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_8gs1qlu";
+const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_5h1n5mq";
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "BBLDSsm3pPdc8xh4q";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,28 +33,47 @@ export const Contact = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      const { error } = await supabase.from("messages").insert([
-        {
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          message: formData.message.trim()
-        }
-      ]);
+      // 1. Send direct email to Pallavi's inbox via EmailJS
+      const templateParams = {
+        name: formData.name.trim(),
+        from_name: formData.name.trim(),
+        email: formData.email.trim(),
+        from_email: formData.email.trim(),
+        reply_to: formData.email.trim(),
+        message: formData.message.trim(),
+        to_name: "Gogineni Pallavi",
+      };
 
-      if (error) {
-        throw error;
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      // 2. Also save to Supabase as database backup
+      try {
+        await supabase.from("messages").insert([
+          {
+            name: formData.name.trim(),
+            email: formData.email.trim(),
+            message: formData.message.trim()
+          }
+        ]);
+      } catch (dbErr) {
+        console.warn("Supabase backup notice:", dbErr);
       }
 
       setStatus({
         type: "success",
-        message: "Your message has been sent and saved to Supabase! Thank you for reaching out."
+        message: "Thank you! Your message has been sent to my inbox. I'll get back to you soon."
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error("Supabase message insert error:", err);
+      console.error("EmailJS sending error:", err);
       setStatus({
         type: "error",
-        message: "Failed to send message. Please try again or reach out directly via email."
+        message: "Failed to send message via form. Please reach out directly at pallavigogineni9290@gmail.com."
       });
     } finally {
       setSubmitting(false);
@@ -88,7 +112,7 @@ export const Contact = () => {
       </div>
 
       <div className={styles.formContainer}>
-        <h3>Send a Message (Supabase)</h3>
+        <h3>Send Me a Message</h3>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="name">Your Name</label>
@@ -134,7 +158,7 @@ export const Contact = () => {
             className={styles.submitBtn}
             disabled={submitting}
           >
-            {submitting ? "Sending to Supabase..." : "Send Message"}
+            {submitting ? "Sending..." : "Send Message"}
           </button>
 
           {status.type === "success" && (
