@@ -1,0 +1,27 @@
+:root {
+  /* Modern Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code: 'Fira Code', monospace;
+  --font-roboto: 'Plus Jakarta Sans', sans-serif;
+  --font-outfit: 'Space Grotesk', sans-serif;
+
+  /* Cyber/Deep Space Palette */
+  --color-bg: #030b1e;
+  --color-bg-alt: #071530;
+  --color-card-bg: rgba(11, 36, 71, 0.45);
+  --color-card-border: rgba(87, 108, 188, 0.35);
+  --color-text: #ffffff;
+  --color-text-muted: #a5d7e8;
+  --color-text-dim: #8ba2be;
+
+  /* Accents */
+  --color-primary: #576cbc;
+  --color-primary-glow: rgba(87, 108, 188, 0.5);
+  --color-cyan: #6fffe9;
+  --color-cyan-glow: rgba(111, 255, 233, 0.4);
+  --color-secondary: #19376d;
+  --color-dark: #0b2447;
+  --color-gold: #ffd43b;
+  --color-emerald: #3ecf8e;
+}

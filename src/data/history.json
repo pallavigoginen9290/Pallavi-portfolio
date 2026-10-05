@@ -1,0 +1,58 @@
+[
+  {
+    "role": "B.Tech – Computer Science & Engineering",
+    "organisation": "KKR & KSR Institute of Technology and Sciences (JNTUK)",
+    "startDate": "2022",
+    "endDate": "2025",
+    "experiences": [
+      "Graduating with a CGPA of 8.82",
+      "Focused on Data Structures, Java, Web Technologies, Database Systems & Cloud",
+      "Developed Academic Project on Blockchain Enabled IoT System for Food Supply Chain"
+    ],
+    "imageSrc": "history/college.svg"
+  },
+  {
+    "role": "Diploma – Computer Science & Engineering",
+    "organisation": "M.B.T.S Government Polytechnic, Guntur (SBTET, AP)",
+    "startDate": "2019",
+    "endDate": "2022",
+    "experiences": [
+      "Graduated with a CGPA of 8.80",
+      "Built strong foundation in C, Java, SQL, and Software Development Lifecycle"
+    ],
+    "imageSrc": "history/polytechnic.svg"
+  },
+  {
+    "role": "Java Full Stack Development Certification",
+    "organisation": "Wipro",
+    "startDate": "2024",
+    "endDate": "2024",
+    "experiences": [
+      "Certified in Full Stack Development using Java, Web Technologies, and Database Queries",
+      "Hands-on development of scalable backend web architectures"
+    ],
+    "imageSrc": "history/wipro.svg"
+  },
+  {
+    "role": "Programming in Java Certification",
+    "organisation": "NPTEL (IIT)",
+    "startDate": "2023",
+    "endDate": "2023",
+    "experiences": [
+      "Successfully certified in Core and Advanced Java Programming concepts",
+      "Mastered OOP principles, Exception Handling, Multithreading, and Collections"
+    ],
+    "imageSrc": "history/nptel.svg"
+  },
+  {
+    "role": "Secondary School Certificate (SSC)",
+    "organisation": "Pragati Talent High School, Sattenapalle (BSE, AP)",
+    "startDate": "2018",
+    "endDate": "2019",
+    "experiences": [
+      "Completed SSC with a CGPA of 9.0",
+      "Excelled in Mathematics and Science"
+    ],
+    "imageSrc": "history/school.svg"
+  }
+]

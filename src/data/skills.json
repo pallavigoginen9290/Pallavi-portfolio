@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Java",
+    "imageSrc": "skills/java.svg"
+  },
+  {
+    "title": "C",
+    "imageSrc": "skills/c.svg"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "skills/python.svg"
+  },
+  {
+    "title": "HTML",
+    "imageSrc": "skills/html.svg"
+  },
+  {
+    "title": "CSS",
+    "imageSrc": "skills/css.svg"
+  },
+  {
+    "title": "SQL",
+    "imageSrc": "skills/sql.svg"
+  },
+  {
+    "title": "Supabase",
+    "imageSrc": "skills/supabase.svg"
+  },
+  {
+    "title": "Git",
+    "imageSrc": "skills/git.svg"
+  },
+  {
+    "title": "VS Code",
+    "imageSrc": "skills/vscode.svg"
+  }
+]
