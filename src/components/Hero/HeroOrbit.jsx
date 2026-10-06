@@ -202,7 +202,7 @@ export const HeroOrbit = () => {
         <div className={styles.globeSphere}>
           <img
             src={getImageUrl("hero/globeAvatar.svg")}
-            alt="Gogineni Pallavi Cyber Globe Avatar"
+            alt="Pallavi Gogineni Cyber Globe Avatar"
             className={styles.globeImg}
           />
         </div>

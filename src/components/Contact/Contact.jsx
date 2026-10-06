@@ -41,7 +41,7 @@ export const Contact = () => {
         from_email: formData.email.trim(),
         reply_to: formData.email.trim(),
         message: formData.message.trim(),
-        to_name: "Gogineni Pallavi",
+        to_name: "Pallavi Gogineni",
       };
 
       await emailjs.send(

@@ -30,7 +30,7 @@ export const Hero = () => {
         </div>
 
         <h1 className={styles.title}>
-          Hi, I'm <span className={styles.nameHighlight}>Gogineni Pallavi</span>
+          Hi, I'm <span className={styles.nameHighlight}>Pallavi Gogineni</span>
         </h1>
 
         <div
